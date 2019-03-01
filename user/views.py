@@ -7,5 +7,5 @@ def index(request):
     return render(request,'index.html',)
 
 def login(request):
-
+    #return HttpResponse('hahah')
     return render(request,'login.html')

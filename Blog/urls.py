@@ -22,7 +22,6 @@ urlpatterns = [
     url(r'^user/',include('user.urls', namespace='user')),
     #url(r'^article/', include('article.urls', namespace='user')),
     url(r'^index/',user.views.index),
-    url(r'', user.views.index),
     url(r'^login/', user.views.login),
 
 ]
