@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+</head>
+<body>
+    <div>
+        <form method="post" action="{% url 'user:register_action' %}">
+            邮箱：<input name='email'><br>
+            昵称：<input name="nickname"><br>
+            密码：<input name="password" type="password"><br>
+            确认密码：<input name="confirmpassword" type="password">{{ error }}<br>
+            <input type="submit" value="提交">
+        </form>
+    </div>
+    <a href="{% url 'user:login' %}">已有账号？前往登录</a>
+</body>
+</html>

@@ -12,13 +12,17 @@
     </style>
 </head>
 <body>
+{% load static %}
+<div class="page" style="background-image: url({% static "images/login.png"%})">
     <div class="login">
-        <form>
-            账号：<input name="number"><br>
-            密码：<input name="password" type="password"><br>
-            记住密码<input type="radio" name="remember" value="female">
-            登录<input type="submit">
+        <form method="post" action="{% url 'user:login_action' %}">
+            账号：<input name="email">{{ error_email }}<br>
+            密码：<input name="password" type="password">{{ error_password }}<br>
+            记住密码<input type="radio" name="remember" value="female"><br>
+            <input type="submit" value="登录">
         </form>
+        <a href="{% url 'user:register' %}">没有账号？点击注册</a>
+    </div>
     </div>
 </body>
 </html>
